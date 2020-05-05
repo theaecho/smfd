@@ -1,0 +1,134 @@
+<style>
+
+iframe.tmblr-iframe { z-index: 999!important; top: 0!important; right: 0!important; opacity: 0.7.5; transform: scale(0.75); transform-origin :100% 0; transition: 1s; }
+iframe.tmblr-iframe:hover { opacity:1!important; transition: 1s; }
+
+body {  font-size: 10px; line-height: 100%; text-align: justify; background-color: #eee; text-align: justify; font-family:"fira-sans"; color: #555;  }
+b { font-weight: 700; }
+a { color: #869DB0; text-decoration: none; }
+
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background-color: #DDDDDD; }
+::-webkit-scrollbar-thumb { background-color: #DEC5B8; }
+
+.main, .sidebar,.content { position: absolute; }
+
+.main { width: 650px; height: 500px; margin: auto; left: 0px; top: 0px; bottom: 0px; right: 0px; border-radius: 25px; background-color: #fff; }
+
+.sidebar { width: 210px; height: 100%; left: 0px; top: 0px; text-align: center; background-color: #869DB0; border-radius: 25px 0px 0px 25px; }
+.sidebargif { width: 100%; height: 150px; background-image: url('{image:Sidebar Gif}'); background-position: center; background-repeat: no-repeat; border-radius: 24px 0px 0px 0px; }
+.sidebarslant { transform: skewY(-7deg); width: calc(100% - 20px); background-color: #869DB0; margin-top: -16px; font-family: brothers; font-size: 35px; color: #DEC5B8; line-height: 80%; padding: 10px; text-shadow: 1px 1px #555; position: relative; z-index: 1; }
+.sidebarcontent { height: 125px; overflow: hidden; position: relative; z-index: 5; color: white; text-align: justify; padding: 15px; font-weight: 100; text-transform: lowercase; letter-spacing: 3px; font-size: 9px; font-style: italic; line-height: 150%; }
+.sidebarcontent b { color: #DEC5B8; letter-spacing: 5px; font-weight: 900; text-shadow: 1px 1px #555; }
+.sidebarcontent .icon { border: 2px solid white; width: 50px; height: 50px; background-image: url({image:Sidebar Icon}); background-position: center center; background-size: auto 50px; float: right; display: inline-block; border-radius: 50px; margin: 0px 0px 5px 5px; }
+
+.tabs { padding: 15px 15px 10px 15px; text-align: center; }
+.tablink { color: white; font-size: 20px; line-height: 20px; transition: 1s; font-family: brothers; font-weight: 700; text-shadow: 1px 1px #555; letter-spacing: 1px; }
+.tablink:hover, .open { text-shadow: 1px 1px #555; color: #DEC5B8; }
+.fade {animation:tab 1.5s}@keyframes tab{from{opacity:0} to{opacity:1}}
+
+.pagin { text-align: center; font-weight: 400; letter-spacing: 3px; font-size: 8px; text-transform: uppercase; }
+.pagin a { color: white; }
+.pagin .current_page { color: #DEC5B8; }
+
+.content { width: 440px; height: 100%; right: 0px; top: 0px;  }
+
+#home { overflow: auto; height: 370px; padding: 15px 18px 15px 15px; border: 50px solid transparent; }
+#home a { transition: 0.5s; }
+#home a:hover { color: white; transition: 0.5s;}
+
+#home .details { padding: 15px; text-transform: uppercase; line-height: 10px; font-size: 8px; letter-spacing: 3px; margin-top: 25px; background-color: #f5f5f5; margin-bottom: 2px; }
+#home .details:nth-child(1) { margin-top: 0px!important; }
+#home .details .date { display: inline-block; width: 36%; }
+#home .details .reblog { display: inline-block; width: 24%; text-align: center; }
+#home .details .notes { display: inline-block;  width: 36%; text-align: right; }
+
+#home .post { background-color: #f5f5f5; }
+#home .post h1 { text-align: center; line-height: 100%; font-size: 35px; margin: 0px 0px 10px 0px; padding: 5px 0px 0px 0px; color: #DEC5B8; text-shadow: 1px 1px #555; font-family: brothers; font-weight: 400; letter-spacing: normal!important; }
+
+#home .post .text { padding: 15px; letter-spacing: 1px; line-height: 120%; }
+#home .post .text blockquote, #home .post .text ul { margin: 0px 0px 10px 0px!important; background-color: rgba(255,255,255,0.5); border: none!important; padding: 10px; }
+#home .post .text ul { padding-left: 30px!important; }
+#home .post .text p { margin: 0px 0px 5px 0px!important; }
+#home .post .text a.tumblr_blog, #home .post .text blockquote a { font-size: 7px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; padding: 5px; margin-right: 2px; background-color: #eaeaea; }
+
+#home .post .text h1 { padding: 0!important; }
+#home .post .text h2 { line-height: 100%; font-size: 20px; margin: 0px 0px 10px 0px; padding: 5px; background-color: #869DB0; color: white; text-shadow: 1px 1px #555; font-family: brothers; font-weight: 400; letter-spacing: normal!important; text-transform: uppercase; }
+#home .post .text h3 { line-height: 100%; font-size: 18px; margin: 0px 0px 10px 0px; color: #DEC5B8; font-family: brothers; font-weight: 400; letter-spacing: normal!important; text-transform: lowercase; }
+#home .post .text h4 { line-height: 100%; font-size: 20px; margin: 0px 0px 10px 0px; padding: 5px; background-color: #DEC5B8; color: white; text-shadow: 1px 1px #555; font-family: brothers; font-weight: 400; letter-spacing: normal!important; text-transform: uppercase; }
+#home .post .text h5 { line-height: 100%; font-size: 18px; margin: 0px 0px 10px 0px; color: #869DB0; font-family: brothers; font-weight: 400; letter-spacing: normal!important; text-transform: lowercase; }
+#home .post .text h6 { color: #869DB0; text-align: center; line-height: 100%; font-size: 35px; margin: 0px 0px 10px 0px; padding: 0px; text-shadow: 1px 1px #555; font-family: brothers; font-weight: 400; letter-spacing: normal!important; }
+
+#home .post .text b, #home .post .text strong { font-family: brothers; font-weight: 400; color: #869DB0; font-size: 12px; }
+#home .post .text i, #home .post .text em { font-size: 12px; color: #999; }
+#home .post .text u { }
+#home .post .text s { }
+#home .post .text sub { }
+#home .post .text sup { }
+#home .post .text code { }
+#home .post .text q { }
+#home .post .text pre { background-color: rgba(255,255,255,0.5); padding: 5px;  }
+#home .post .text small { }
+#home .post .text big { }
+
+#home .tags { padding: 10px; font-size: 6px; line-height: 250%; letter-spacing: 3px; background-color: #f5f5f5; margin-top: 2px; font-weight: 100; text-align: left; }
+#home .tags a { background-color: #ccc; border-radius: 10px; color: white; padding: 3px 6px; margin-right: 3px; white-space: nowrap; text-transform: lowercase; }
+#home .tags a:hover, #home .tags a:active { background-color: #869DB0; }
+
+.chatodd, .chateven { padding: 10px; letter-spacing: 1px; line-height: 120%; }
+.chatodd { background-color: #eee; }
+.chateven { background-color: #e6e6e6; }
+.chatodd b, .chateven b { font-size: 7px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: #DEC5B8; text-shadow: 1px 1px #999; }
+
+.qsource { text-align:right; text-transform: uppercase; font-size: 8px; padding: 15px; letter-spacing: 2px; }
+
+.photoset { max-width: 100%; }
+#home .post .text img { max-width: 100%; height: auto; }
+
+.question { padding: 15px; background-color: #DEC5B8; color: white; letter-spacing: 1px; line-height: 100%; border-bottom: 1px solid white; }
+.askerblog { text-align: right; padding: 15px; background-color: #869DB0; letter-spacing: 2px; font-family: brothers; font-size: 15px; text-transform: lowercase; color: white; }
+.askerblog a { color: white!important; }
+.answer { padding: 15px; letter-spacing: 1px; background-color: #eaeaea; }
+
+.audio_player { padding: 10px; }
+
+#current { height: 500px; overflow: auto; }
+
+.about { margin: 25px; height: 450px; width: 390px; }
+.about .three { height: 150px; }
+.about .three .section { display: inline-block; border: 15px solid transparent; height: calc(100% - 30px); width: calc(50% - 30px); margin: 0px -2px 0px -2px; vertical-align: top; }
+.about .three #stats, .about .three #connections, .about .three #blurb, .about .three #timeline { overflow: auto; width: calc(50% - 35px)!important; padding-right: 5px; }
+
+.about .three #timeline, .about .three #stats { background-color: #f3f3f3; text-transform: lowercase; letter-spacing: 1px; font-size: 9px; font-style: italic; line-height: 120%; }
+.about .three #stats { line-height: 150%; }
+.about .three #timeline b, .about .three #stats b, .about .three #blurb b { font-family: brothers; color: #869DB0; font-weight: 400; font-style: normal; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; }
+.about .three #timeline { background-color: #ececec!important; }
+
+.about .three #blurb { background-color: #f3f3f3; text-transform: lowercase; }
+.about .three #blurb i { font-style: italic; letter-spacing: 1px; color: #999; }
+
+.about .three #face { background-image: url('https://via.placeholder.com/150'); background-position: center center; background-size: auto 150px; }
+
+.about .three #connections { background-color: #ececec; }
+.about .three #connections .character { background-color: #fafafa; padding: 10px; margin-bottom: 5px; }
+.about .three #connections .character img { float: left; width: 25px; margin: 0px 5px 5px 0px; }
+.about .three #connections fam { font-family: brothers; font-weight: 400; font-style: normal; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; color: #89B8A5; }
+.about .three #connections pal { font-family: brothers; font-weight: 400; font-style: normal; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; color: #9493BC; }
+.about .three #connections love { font-family: brothers; font-weight: 400; font-style: normal; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; color: #F9C6B1; }
+.about .three #connections misc { font-family: brothers; font-weight: 400; font-style: normal; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; color: #F9DBB1; }
+.about .three #connections rela { font-style: italic; letter-spacing: 1px; color: #999; }
+
+.about .three #traits { background-color: #F3F3F3; text-transform: uppercase; letter-spacing: 1px; font-size: 7px; font-style: italic; color: #999; line-height: 120%; }
+.about .three #traits .gray { background-color: #e6e6e6; height: 9px; width: 100%; margin: 0px 0px 8px 0px; }
+.about .three #traits .gray .percent { display: inline-block; margin-left: -13px; }
+.about .three #traits .gray .slider { background-color: #869DB0; height: 8px; width: 26px; display: inline-block; }
+.about .three #traits c { float: left; }
+.about .three #traits d { float: right; }
+
+.navi { margin: 25px; height: 450px; width: 390px; }
+.navi .link { width: calc(50% - 54px); display: inline-block; height: calc(25% - 104px); background-color: #DEC5B8; padding: 50px 25px; text-align: center; background-size: 100% auto; background-position: center center; }
+.navi .link a { color: white; font-size: 20px; font-style: italic; }
+.navi .link:nth-child(odd) { margin: 0px 5px 5px 0px; }
+.navi .link:nth-child(even) { margin: 0px 0px 5px 0px; }
+    
+</style>  
